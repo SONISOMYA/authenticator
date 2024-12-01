@@ -1,0 +1,58 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.authenticator"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // Specify your unique Application ID
+        applicationId = "com.example.authenticator"
+        // Updated minSdk to satisfy Firebase Auth requirements
+        minSdk = 23
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    // Add the signingConfigs block here
+   signingConfigs {
+    release {
+        storeFile file(project.hasProperty("KEYSTORE_FILE") ? project.KEYSTORE_FILE : "my-release-key.keystore")
+        storePassword project.hasProperty("KEYSTORE_PASSWORD") ? project.KEYSTORE_PASSWORD : " 1 2 3"
+        keyAlias project.hasProperty("KEY_ALIAS") ? project.KEY_ALIAS : "key"
+        keyPassword project.hasProperty("KEY_PASSWORD") ? project.KEY_PASSWORD : " 1 2 3"
+    }
+}
+
+    buildTypes {
+        release {
+            // Correctly referencing the release signing config
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
