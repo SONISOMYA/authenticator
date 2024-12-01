@@ -1,16 +1,28 @@
-# authenticator
+# Task Management App
 
-A new Flutter project.
+A cloud-based task management app built with **Flutter** and **Firebase** for real-time task tracking and management.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **User Authentication**: Secure sign-up and login using Firebase Authentication.
+- **Task Management**: Add, delete, and mark tasks as completed.
+- **Real-Time Sync**: Instant updates across devices using Firebase Firestore.
+- **Cross-Platform**: Available on both Android and iOS.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Frontend**: Flutter, Dart
+- **Backend**: Firebase (Authentication, Firestore)
+- **Tools**: Android Studio, FlutterFire
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup
+
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/your-username/task-management-app.git
+   cd task-management-app
+   flutter pub get
+   flutter run
+
+  Simply replace `your-username` with your GitHub username, and the rest should be ready to use!
