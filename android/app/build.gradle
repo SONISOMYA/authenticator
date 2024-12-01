@@ -32,15 +32,7 @@ android {
         versionName = flutter.versionName
     }
 
-    // Add the signingConfigs block here
-   signingConfigs {
-    release {
-        storeFile file(project.hasProperty("KEYSTORE_FILE") ? project.KEYSTORE_FILE : "my-release-key.keystore")
-        storePassword project.hasProperty("KEYSTORE_PASSWORD") ? project.KEYSTORE_PASSWORD : " 1 2 3"
-        keyAlias project.hasProperty("KEY_ALIAS") ? project.KEY_ALIAS : "key"
-        keyPassword project.hasProperty("KEY_PASSWORD") ? project.KEY_PASSWORD : " 1 2 3"
-    }
-}
+    
 
     buildTypes {
         release {
