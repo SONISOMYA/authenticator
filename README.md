@@ -1,6 +1,7 @@
 # Task Management App
 
 A cloud-based task management app built with **Flutter** and **Firebase** for real-time task tracking and management.
+You can directly download it from the above app_release_apk file
 
 ## Features
 
