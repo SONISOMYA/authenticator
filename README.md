@@ -43,10 +43,10 @@ Here are some screenshots of the app:
 
 3. **Home Screen:**
 
-   <img src="assets/three.png" width="300" />
+   <img src="assets/four.png" width="300" />
 
 4. **Add Task Page:**
 
-   <img src="assets/images/four.png" width="300" />
+   <img src="assets/three.png" width="300" />
 
 
